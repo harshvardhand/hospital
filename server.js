@@ -59,7 +59,14 @@ function requireStaff(request, response) {
 
 function requireSameOrigin(request, response) {
   const origin = request.headers.origin;
-  if (!origin || origin === `http://${request.headers.host}`) return true;
+  if (!origin) return true;
+  const host = request.headers.host;
+  const forwardedProto = request.headers["x-forwarded-proto"];
+  const protocol = forwardedProto || (request.socket.encrypted ? "https" : "http");
+  const expected = `${protocol}://${host}`;
+  if (origin === expected || origin === `http://${host}` || origin === `https://${host}`) {
+    return true;
+  }
   sendJson(response, 403, { error: "Cross-origin request blocked." });
   return false;
 }
