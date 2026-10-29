@@ -1,0 +1,22 @@
+[
+  {
+    "id": "5c42a849-3e37-4818-89da-5f94def7af12",
+    "name": "Priya",
+    "phone": "1263645789",
+    "pinSalt": "f4f21622209e9c015e0f50a72be889c6",
+    "pinHash": "405b900ea22eec7a40be213c25694271cb654284a87aa01ba63e9d7db2288a3a171a290874826d8c4bd1ed6fac0b0e08b7af626b1252a9e7005fd143c65f19d5",
+    "createdAt": "2026-10-18T15:55:26.859Z",
+    "visits": [
+      {
+        "id": "1a854c3f-f2b0-4fdc-8439-80e5cf262d2f",
+        "appointmentId": "6a4b6b92-4042-4f52-bfa6-892f64fbb53b",
+        "date": "2026-10-18",
+        "doctor": "Dr. Nikhil H. Mahanubhav",
+        "treatment": "Root Canal (RCT)",
+        "notes": "",
+        "followUp": "",
+        "createdAt": "2026-10-18T15:55:26.859Z"
+      }
+    ]
+  }
+]
