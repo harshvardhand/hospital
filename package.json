@@ -1,0 +1,22 @@
+{
+  "name": "kalpana-hospital-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local appointment booking and staff queue for Kalpana Hospital",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check backend/appointment-store.js && node --check backend/patient-store.js && node --check backend/auth.js && node --check backend/push-notifications.js && node --check service-worker.js && node --check backend/supabase-client.js && node --check backend/supabase-appointment-store.js && node --check backend/supabase-patient-store.js && node --check scripts/migrate-to-supabase.js",
+    "test": "node --test",
+    "verify": "npm run check && npm test",
+    "migrate": "node scripts/migrate-to-supabase.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "web-push": "^3.6.7",
+    "@supabase/supabase-js": "^2.45.4"
+  }
+}
